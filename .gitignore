@@ -2,3 +2,4 @@ custom_files/
 custom_files
 valhalla.json
 .env
+appsettings.json
