@@ -10,6 +10,6 @@ services:
 #    environment:
 #      -
     volumes:
-      - /home/rose/valhalla/custom_files:/custom_files
+      - ./custom_files:/custom_files
     command: ["valhalla_service", "/custom_files/valhalla.json"]
     working_dir: /valhalla
