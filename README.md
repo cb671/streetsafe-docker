@@ -17,6 +17,7 @@ admins.sqlite        duplicateways.txt  great-britain-latest.osm.pbf  transit_ti
 default_speeds.json  file_hashes.txt    timezones.sqlite              valhalla.json  valhalla_tiles.tar
 ```
 `great-britain-latest.osm.pbf` is the OSM data we used to initialise our Valhalla tiles. Since this is a custom fork of Valhalla, we recommend using the code in [our fork](https://github.com/solithcy/valhalla_safety/) to generate a configuration file. A dummy configuration file is available in this repository. Notably, there is a new field in `additional_data`, `db_connection_string`. Here you will need to put the connection URL to your Postgres database.
+Please note that the dummy configuration file is NOT used, and a valid configuration file must be present at `./custom_files/valhalla.json`.
 
 You must add a `.env` file to the root of this repository, populated with values as lined out in our [server README](https://github.com/cb671/streetsafe-server/blob/main/README.md). Optionally, you can choose which branches the server and client are built from by setting the `BUILD_BRANCH` env file. This will default to `main`, however for the latest (and possibly unstable) features, you can set this to `dev`.
 
