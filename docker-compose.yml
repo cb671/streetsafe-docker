@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  valhalla:
+    image: ghcr.io/solithcy/valhalla_safety:safety
+    container_name: valhalla-safe
+    restart: unless-stopped
+    ports:
+      - "8002:8002"
+#    environment:
+#      -
+    volumes:
+      - /home/rose/valhalla/custom_files:/custom_files
+    command: ["valhalla_service", "/custom_files/valhalla.json"]
+    working_dir: /valhalla
