@@ -19,6 +19,7 @@ services:
       - .env
     environment:
       - PORT=3000
+      - VALHALLA_URL=http://valhalla:8002
     expose:
       - "3000"
 
